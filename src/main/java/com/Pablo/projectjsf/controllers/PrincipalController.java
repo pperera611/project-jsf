@@ -15,6 +15,7 @@ import com.Pablo.projectjsf.services.EmpleadoService;
 public class PrincipalController {
 	
 	private List<Empleado> empleados;
+	private List<Empleado> empleadosFiltrados;
 	
 	private EmpleadoService empleadoservice = new EmpleadoService();
 	
@@ -26,6 +27,7 @@ public class PrincipalController {
 		this.consultarEmpleados();
 		
 	}
+	
 	
 	
 	public void consultarEmpleados() {
@@ -46,6 +48,24 @@ public class PrincipalController {
 	 */
 	public void setEmpleados(List<Empleado> empleados) {
 		this.empleados = empleados;
+	}
+
+
+
+	/**
+	 * @return the empleadosFiltrados
+	 */
+	public List<Empleado> getEmpleadosFiltrados() {
+		return empleadosFiltrados;
+	}
+
+
+
+	/**
+	 * @param empleadosFiltrados the empleadosFiltrados to set
+	 */
+	public void setEmpleadosFiltrados(List<Empleado> empleadosFiltrados) {
+		this.empleadosFiltrados = empleadosFiltrados;
 	}
 
 }
